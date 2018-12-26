@@ -112,7 +112,7 @@ public class Task04 {
                     chosen += diff;
                     break;
                 case 'y':
-                    System.out.println("Your number is " + chosen + "!");
+                    System.out.println("Number that you think of is " + chosen + "!");
                     flag = false;
                     break;
             }
