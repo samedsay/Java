@@ -34,5 +34,43 @@ public class Task05 {
             System.out.println(i + ": inSum? " + state3 +
             "; inIntersect? " + state4 + "; inSymDiff? " + state5 );
         }
+        
+        // Problem 2
+
+        System.out.println("Enter an int");
+        int n = scan.nextInt();
+        boolean is7thBitSet = false;
+        is7thBitSet = (n & 128) == 128;
+        System.out.println("Is 7th bit set? " + is7thBitSet);
+
+        int numberOf1s = 0;
+        int remainder = 0;
+        long total = 0;
+        int exponent = 0;
+        int sign = 0;
+
+        if(n <= 0)
+            sign = 1;
+
+
+        while(n > 0){
+            remainder = n % 2;
+            total += remainder * Math.pow(10, exponent);
+            n /= 2;
+            exponent++;
+        }
+
+        System.out.println(total);
+        while(total > 0){
+            if(total % 10 == 1)
+                numberOf1s++;
+            total /= 10;
+        }
+
+        System.out.println("No. of 1s is " + numberOf1s);
+
+        int mostSignificant = exponent-1;
+
+        System.out.println("Most significant bit set: " + mostSignificant);
     }
 }
