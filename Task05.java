@@ -47,30 +47,62 @@ public class Task05 {
         int remainder = 0;
         long total = 0;
         int exponent = 0;
-        int sign = 0;
+        int mostSignificant = -1;
+        int firstNumber = n;
+        int swapped = 0;
+        int leastByte1 = 0;
+        int leastByte2 = 0;
 
-        if(n <= 0)
-            sign = 1;
 
+        for (int i = 0, j = 31; i < 32; i++, j--) {
+            if (((n >>> i) & 1) == 1) {
+                numberOf1s++;
+            }
+        }
 
-        while(n > 0){
+        System.out.println("No. of 1s is " + numberOf1s);
+
+        while (n > 0) {
             remainder = n % 2;
             total += remainder * Math.pow(10, exponent);
             n /= 2;
             exponent++;
         }
 
-        System.out.println(total);
-        while(total > 0){
-            if(total % 10 == 1)
-                numberOf1s++;
-            total /= 10;
+        if (n < 0) {
+
+            for (int i = 0, j = 31; i < 32; i++, j--) {
+                if (((n >>> j) & 1) == 1) {
+                    total += 1 * Math.pow(10, exponent);
+                }
+                exponent++;
+            }
+        }
+        if (firstNumber != 0) {
+            mostSignificant = exponent - 1;
         }
 
-        System.out.println("No. of 1s is " + numberOf1s);
-
-        int mostSignificant = exponent-1;
-
         System.out.println("Most significant bit set: " + mostSignificant);
+
+        if (firstNumber < 0) {
+
+            leastByte1 = firstNumber << 24;
+            leastByte1 = leastByte1 >> 16;
+            leastByte2 = firstNumber << 16;
+            leastByte2 = leastByte2 >> 24;
+            swapped = (leastByte1 | leastByte2);
+
+        } else {
+
+            leastByte1 = firstNumber << 24;
+            leastByte1 = leastByte1 >>> 16;
+            leastByte2 = firstNumber << 16;
+            leastByte2 = leastByte2 >>> 24;
+            swapped = (leastByte1 | leastByte2);
+        }
+
+
+        System.out.println("With 2 least significant bytes" + " swapped: " + swapped);
+
     }
 }
