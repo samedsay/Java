@@ -41,7 +41,6 @@ public class werner08 {
 
         for (int[] r : inner(a))
             System.out.println(Arrays.toString(r));
-
     }
 
     public static int[][] inner(int[][] arr) {
@@ -57,15 +56,12 @@ public class werner08 {
                 }
             }
         }
-
         return temp;
-
     }
 
     public static void function3(int[][] arr) {
-
         int even = 0, odd = 0;
-
+        
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
 
@@ -73,12 +69,9 @@ public class werner08 {
                     even++;
                 else
                     odd++;
-
             }
         }
-
         System.out.println("Even: " + even + "; odd: " + 7);
-
     }
 
     public static int[] function2(int[][] arr) {
@@ -96,9 +89,7 @@ public class werner08 {
             }
             biggest = 0;
         }
-
         return temp;
-
     }
 
     public static void function1(int[][] arr) {
@@ -117,13 +108,11 @@ public class werner08 {
             }
             row = 0;
         }
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 tempArr[j][i] = arr[i][j];
             }
         }
-
         for (int i = 0; i < tempArr.length; i++) {
             for (int j = 0; j < tempArr[i].length; j++) {
                 col += tempArr[i][j];
@@ -134,8 +123,6 @@ public class werner08 {
             }
             col = 0;
         }
-
         System.out.println(indexRow + " " + indexCol);
-
     }
 }
