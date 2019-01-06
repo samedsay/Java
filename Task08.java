@@ -1,9 +1,17 @@
-public class Task08 {
+public class werner08 {
     public static void main(String[] args) {
 
         // Problem 1
 
         int[][] arr = {{1, 3, 2}, {3, 4, 8}, {2, 6, 8}, {1, 8, 5}};
+
+        function1(arr);
+
+        // Problem 2
+
+    }
+
+    public static void function1(int[][] arr) {
 
         int row = 0, col = 0, biggestRow = 0, biggestCol = 0;
         int indexRow = 0, indexCol = 0;
@@ -38,9 +46,6 @@ public class Task08 {
         }
 
         System.out.print(indexRow + " " + indexCol);
-
-        // Problem 2
-
 
     }
 }
