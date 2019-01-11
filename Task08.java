@@ -99,7 +99,7 @@ public class werner08 {
         int[][] tempArr = new int[arr[col].length][arr.length];
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0, k = 0; j < arr[i].length; j++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 row += arr[i][j];
             }
             if (biggestRow <= row) {
