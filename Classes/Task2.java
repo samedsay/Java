@@ -1,4 +1,4 @@
-class Task2 {
+class Task02 {
 
     //Prints array elements with recursive.
     static void printArr(int[] arr, int from) {
