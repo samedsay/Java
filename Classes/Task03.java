@@ -1,4 +1,4 @@
-class Task3 {
+class Task03 {
 
     private static int sino;
     private static int siyes = 2;
@@ -14,7 +14,7 @@ class Task3 {
         fin = 3;
     }
 
-    public Task3() {
+    public Task03() {
         show("   constructor");
     }
 
@@ -27,6 +27,6 @@ class Task3 {
 
     public static void main(String[] args) {
 
-        Task3 e = new Task3();
+        Task03 e = new Task3();
     }
 }
