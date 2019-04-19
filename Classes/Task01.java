@@ -1,4 +1,4 @@
-public class Task1 {
+public class Task01 {
 
     private static double rate = 1;
     private static char ID = 'A';
@@ -20,10 +20,10 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        Task1.setRate(4.1);
-        Task1 sa = new Task1(10);
-        Task1 sb = new Task1(16);
-        Task1 sc = new Task1(20);
+        Task01.setRate(4.1);
+        Task01 sa = new Task01(10);
+        Task01 sb = new Task01(16);
+        Task01 sc = new Task01(20);
         System.out.println(sa + "\n" + sb + "\n" + sc);
 
 
