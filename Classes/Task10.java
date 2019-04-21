@@ -4,12 +4,12 @@ class Person implements Comparable<Person> {
     final static int currentYear =
             java.util.Calendar.getInstance().get(Calendar.YEAR);
     String name;
-    int birtYear;
+    int birthYear;
     int height;
 
     Person(String n, int y, int h) {
         name = n;
-        birtYear = y;
+        birthYear = y;
         height = h;
     }
 
@@ -17,14 +17,14 @@ class Person implements Comparable<Person> {
         int k = name.compareToIgnoreCase(o.name);
         if (k != 0)
             return k;
-        k = o.birtYear - birtYear;
+        k = o.birthYear - birthYear;
         if (k != 0)
             return k;
-        return height - o.birtYear;
+        return height - o.birthYear;
     }
 
     public String toString() {
-        return name + "(" + (currentYear - birtYear) +
+        return name + "(" + (currentYear - birthYear) +
                 "/" + height + ")";
     }
 }
@@ -34,7 +34,7 @@ class Comp1 implements Comparator<Person> {
         int k = o1.height - o2.height;
         if (k != 0)
             return k;
-        k = o2.birtYear - o1.birtYear;
+        k = o2.birthYear - o1.birthYear;
         if (k != 0)
             return k;
         return o1.name.compareToIgnoreCase(o2.name);
@@ -43,7 +43,7 @@ class Comp1 implements Comparator<Person> {
 
 class Comp2 implements Comparator<Person> {
     public int compare(Person o1, Person o2) {
-        int k = o2.birtYear - o1.birtYear;
+        int k = o2.birthYear - o1.birthYear;
         if (k != 0)
             return k;
         k = o1.name.compareToIgnoreCase(o2.name);
@@ -88,14 +88,14 @@ public class Task10 {
                 k = p.height - q.height;
                 if (k != 0)
                     return k;
-                return q.birtYear - p.birtYear;
+                return q.birthYear - p.birthYear;
             }
         });
 
-        writeL(list, "Anonym:    name, height, age");
+        writeL(list, "Anonym:  name, height, age");
 
         Collections.sort(list, (f, s) -> f.height - s.height);
-        writeL(list, "Lambda:   name, height, age");
+        writeL(list, "Lambda:  name, height, age");
 
     }
 
