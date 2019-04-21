@@ -1,6 +1,7 @@
+import java.util.Arrays;
 import java.util.Locale;
 
-abstract class Figure {
+abstract class Figure implements Comparable<Figure> {
     abstract public double getArea();
 
     abstract public double getPerimeter();
@@ -21,6 +22,16 @@ abstract class Figure {
     public String toString() {
         return " area: " + String.format("%6.3f", getArea())
                 + "; perimeter: " + String.format("%6.3f", getPerimeter());
+    }
+
+    public int compareTo(Figure f) {
+        double diff = getPerimeter() - f.getPerimeter();
+        if (diff < 0)
+            return -1;
+        else if (diff > 0)
+            return +1;
+        else
+            return 0;
     }
 }
 
@@ -63,9 +74,8 @@ class Rectangle extends Figure {
     }
 
     public String toString() {
-        return "Rectangle (a=" + a + " b=" + b + ")" + super.toString();
+        return "Rectangle (a=" + a + " b=" + b + "   )" + super.toString();
     }
-
 }
 
 public class Task07 {
@@ -79,6 +89,11 @@ public class Task07 {
         };
         Figure fig = Figure.getFigMaxArea(figs);
         System.out.println("\nLargest area: \n" + fig);
+
+        Arrays.sort(figs);
+        System.out.println("\nSorted by circumference");
+        for (Figure f : figs)
+            System.out.println(f);
 
     }
 }
