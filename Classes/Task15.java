@@ -15,7 +15,7 @@ abstract class Animal {
     }
 }
 
-public class Task14 {
+public class Task15 {
     public static void main(String[] args) {
         Animal max = new Animal("Max", 15) {
             @Override
