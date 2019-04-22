@@ -1,4 +1,4 @@
-public class Task26 {
+public class Task27 {
 
     static <T extends Comparable<T>> T getMax(T[] arr) {
         if (arr == null || arr.length == 0)
