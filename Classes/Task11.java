@@ -102,6 +102,6 @@ public class Task11 {
         Arrays.sort(persons, (f, s) -> s.getYear() - f.getYear());
         Person.show(persons, "Order by lambda : " +
                 "by year ");
-
+        
     }
 }
