@@ -1,6 +1,6 @@
 public class Task28 {
 
-    public enum Season {SPRING, SUMMER, FALL, WINTER}
+    public enum Season {SPRING, SUMMER, FALL, WINTER};
 
     public static void main(String[] args) {
 
