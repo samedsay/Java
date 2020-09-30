@@ -1,3 +1,2 @@
-# Basic Java Code Examples
-Check the tasks and if you like open the java source code.
-Good luck :)
+# Java Code Examples
+This Repository contains a good selection of Java Tasks along with beautifully explained examples to guide yout through these tasks.
