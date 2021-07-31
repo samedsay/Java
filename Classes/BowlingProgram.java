@@ -1,5 +1,6 @@
 import java.util.*; 
-import java.util.Collections;
+import java.util.Iterator;
+
 public class Bowling {
     HashMap<String, Integer> players;
     Bowling() {
@@ -9,14 +10,14 @@ public class Bowling {
         players.put(name, p);
     }
     //your code goes here
-    public void getWinner(){
-
-
+    public void getWinner() {
+        System.out.println(players.entrySet()
+        .stream().max((entry1, entry2) -> entry1.getValue() > entry2.getValue() ? 1 : -1).get().getKey());
     }
     
 }
 
-public class BowlingProgram {
+public class Program {
     public static void main(String[ ] args) {
         Bowling game = new Bowling();
         Scanner sc = new Scanner(System.in);
